@@ -46,6 +46,6 @@ class MusicLibrary
                 return;
             }
         }
-        System.out.println("Title not found in the library.");
+        System.out.println("\nTitle not found in the library.");
     }
 }

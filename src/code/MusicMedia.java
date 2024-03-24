@@ -62,11 +62,11 @@ class MusicMedia
     @Override
     public String toString() 
     {
-        return "Album [Artist=" + artist + ", title=" + title + ", trackCount=" + trackCount + ", totalMinutes=" + totalMinutes + "]";
+        return "Album [Artist=" + artist + ",title=" + title + ", trackCount=" + trackCount + ", totalMinutes=" + totalMinutes + "]";
     }
 
     public void playSelection() 
     {
-        System.out.println("Thank you for using our Music Library.");
+        System.out.println("\nThank you for using our Music Library.");
     }
 }
