@@ -14,9 +14,13 @@ class Main
     public static void main(String[] args) 
     {
         // Create instances of each subtype
-        Record record = new Record("The Beatles", "Hey Jude", 1, 7, 1968, 7, 45.0);
-        CompactDisc cd = new CompactDisc("Neil Young & Crazy Horse", "Everybody Knows This Is where", 4, 40, 1969, false, false);
-        AudioFile audioFile = new AudioFile("Donnie Iris and the Cruisers", "Ah Leah!", 1, 4, 1980, "wav");
+        Record record = new Record("The Beatles", "Hey Jude"
+                , 1, 7, 1968, 7, 45.0);
+        CompactDisc cd = new CompactDisc("Neil Young & Crazy Horse"
+                , "Everybody Knows This Is Nowhere", 4
+                , 40, 1969, false, false);
+        AudioFile audioFile = new AudioFile("Donnie Iris and the Cruisers"
+                , "Ah Leah!", 1, 4, 1980, "wav");
 
         // Add them to the library
         MusicLibrary library = new MusicLibrary();
@@ -29,7 +33,7 @@ class Main
 
         // Test playTitle method
         library.playTitle("Hey Jude");
-        library.playTitle("Everybody Knows This Is where");
+        library.playTitle("Everybody Knows This Is Nowhere");
         library.playTitle("Ah Leah!");
 
     }

@@ -12,10 +12,16 @@
 
 class CompactDisc extends MusicMedia 
 {
-    private boolean bonusTracks;
-    private boolean digipac;
+    private final boolean bonusTracks;
+    private  final boolean digipac;
 
-    CompactDisc(String artist, String title, int trackCount, int totalMinutes, int year, boolean bonusTracks, boolean digipac) 
+    CompactDisc(final String artist,
+                final String title,
+                final int trackCount,
+                final int totalMinutes,
+                final int year,
+                final boolean bonusTracks,
+                final boolean digipac)
     {
         super(artist, title, trackCount, totalMinutes, year);
         this.bonusTracks = bonusTracks;
@@ -25,7 +31,8 @@ class CompactDisc extends MusicMedia
     @Override
     public String toString() 
     {
-        return "CompactDisc [bonusTracks=" + bonusTracks + ", digipac=" + digipac + ", " + super.toString() + "]";
+        return "CompactDisc [bonusTracks=" + bonusTracks
+                + ", digipac=" + digipac + ", " + super.toString() + "]";
     }
 
     @Override

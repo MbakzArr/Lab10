@@ -3,7 +3,7 @@
  *
  * Arguments:
  * - library: an ArrayList to store MusicMedia items
- * 
+ *
  * Methods:
  * - addMedia(): add a media item to the library
  * - displayLibrary(): display all items in the library
@@ -18,7 +18,7 @@ import java.util.ArrayList;
 
 class MusicLibrary 
 {
-    private ArrayList<MusicMedia> library = new ArrayList<>();
+    private final ArrayList<MusicMedia> library = new ArrayList<>();
 
     public void addMedia(MusicMedia media) 
     {

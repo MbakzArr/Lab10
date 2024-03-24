@@ -13,10 +13,17 @@ class AudioFile extends MusicMedia
 {
     private final String fileType;
 
-    AudioFile(String artist, String title, int trackCount, int totalMinutes, int year, String fileType) 
+    AudioFile(final String artist,
+              final String title,
+              final int trackCount,
+              final int totalMinutes,
+              final int year,
+              final String fileType)
     {
         super(artist, title, trackCount, totalMinutes, year);
-        if (!fileType.equals("mp3") && !fileType.equals("m4a") && !fileType.equals("wav")) 
+        if (!fileType.equals("mp3")
+                && !fileType.equals("m4a")
+                && !fileType.equals("wav"))
         {
             throw new IllegalArgumentException("Invalid file type");
         }

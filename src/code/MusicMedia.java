@@ -15,15 +15,25 @@
 
 class MusicMedia 
 {
-    private String artist;
+    private final String artist;
     private final String title;
-    private int trackCount;
-    private int totalMinutes;
+    private final int trackCount;
+    private final int totalMinutes;
     private final int year;
+    private static final int INVALID_AMOUNT = 0;
 
-    MusicMedia(String artist, String title, int trackCount, int totalMinutes, int year) 
+    MusicMedia(String artist,
+               String title,
+               int trackCount,
+               int totalMinutes, int year)
     {
-        if (artist == null || title == null || artist.isEmpty() || title.isEmpty() || trackCount <= 0 || totalMinutes <= 0 || year <= 0) 
+        if (artist == null
+                || title == null
+                || artist.isEmpty()
+                || title.isEmpty()
+                || trackCount <= INVALID_AMOUNT
+                || totalMinutes <= INVALID_AMOUNT
+                || year <= INVALID_AMOUNT)
         {
             throw new IllegalArgumentException("Invalid MusicMedia");
         }
@@ -62,7 +72,9 @@ class MusicMedia
     @Override
     public String toString() 
     {
-        return "Album [Artist=" + artist + ",title=" + title + ", trackCount=" + trackCount + ", totalMinutes=" + totalMinutes + "]";
+        return "Album [Artist=" + artist
+                + ",title=" + title + ", trackCount="
+                + trackCount + ", totalMinutes=" + totalMinutes + "]";
     }
 
     public void playSelection() 
